@@ -1,0 +1,306 @@
+/*CSS Generale*/
+
+body {
+    padding: 0;
+    margin: 0;
+}
+.page {
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+/*La partie de SignIn*/
+
+.signin-section {
+    background: url(../Image/noise.png) repeat;
+    background-attachment: fixed;
+    width: 50%;
+    background-color: #FFF;
+    position: relative;
+    transition: .5s ease;
+}
+.signin-section:hover {
+    width: 55%;
+}
+.signin-section:before {
+    background-image: url(../Image/noise.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-color:#FFF;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0px;
+    z-index: 5;
+    right: 20px;
+    border-radius: 0%;
+    transition: .3s ease;
+}
+.signin-section:hover:before {
+    width: 20px;
+    right: -10px;
+    border-radius: 30%;
+    z-index: 10;
+}
+
+/*La partie de SignUp*/
+
+.signup-section {
+    background-image: url(../Image/noise.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    width: 50%;
+    background-color: rgb(5,5,5);
+    position: relative;
+    transition: .5s ease;
+}
+.signup-section:before {
+    background-image: url(../Image/noise.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-color: rgb(5,5,5);
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0px;
+    z-index: 5;
+    left: 20px;
+    border-radius: 0%;
+    transition: .3s ease;
+}
+.signup-section:hover:before {
+    width: 20px;
+    left: -10px;
+    border-radius: 30%;
+    z-index: 10;
+}
+.signup-section:hover {
+    width: 55%;
+}
+
+/*La CSS des titres de signup et signin*/
+
+.choice{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: .5s ease .5s;
+    z-index: 12;
+    cursor: pointer;
+}
+.title {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 10px 0 10px;
+    font-size: 17px;
+    color: #0C67ED;
+}
+.signin-section .title {
+    color: #0C67ED;
+}
+
+/*Apres le choix de l utilisateur s'il veut se connecter ou bien creer un compte*/
+
+.page-side.section-open {
+    width: 100%;
+}
+.page-side.section-close {
+    width: 350px;
+}
+.page-side.section-close:hover {
+    width: 400px;
+}
+.page-side.section-open .choice {
+    margin-top: -15px;
+    opacity: 0;
+   	visibility: hidden;
+}
+.page-side.section-open:hover:before {
+    width: 0px;
+    right: 0px;
+    border-radius: 30%;
+    z-index: 10;
+}
+
+/*La CSS Pour SignIn*/
+
+.page-side .signin-form-area {
+    width: 100%;
+    max-width: 555px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 11;
+    position: relative;
+}
+.form-title{
+    margin: 50px 0 0 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 46px;
+    white-space: nowrap;
+}
+.signin-section .form-title{
+    color: #0C67ED;
+}
+.label {
+    width: 100%;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+.label .input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid rgb(5,5,5);
+    outline: none;
+    padding: 9px;
+    color: #777777;
+    width: 100%;
+    background-color: transparent;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.signin-section-submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.signin-section-submit .login-form-submit-btn {
+    position: relative;
+    overflow: hidden;
+}
+.login-form-submit-btn input:hover{
+	 background-color: red;
+}
+.signin-section-submit .login-form-submit-btn input {
+    position: relative;
+    background-color: #0C67ED;
+    color: #FFF;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    height: 35px;
+    width: 80px;
+    border-radius: 20px;
+    font-size: 0;
+    background-image: url(../Image/submit-white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.signin-section-submit .login-form-submit-btn input:hover {
+    background-color: black;
+}
+
+/*La CSS Pour SignUp*/
+
+.page-side .signup-form-area{
+    width: 100%;
+    max-width: 555px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 11;
+    position: relative;
+}
+.signup-section .form-title{
+    color: #0C67ED;
+}
+.section-form {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.signup-section .label .input{
+    border-bottom: 1px solid #fafafa;
+    color: #FFF;
+}
+.exception{
+	color: black;
+}
+.signup-section-submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.signup-section-submit .login-form-submit-btn {
+    position: relative;
+    overflow: hidden;
+}
+.signup-section-submit .login-form-submit-btn input {
+    position: relative;
+    background-color: #0C67ED;
+    color: #FFF;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    height: 35px;
+    width: 80px;
+    border-radius: 20px;
+    font-size: 0;
+    background-image: url(../Image/submit-black.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.signup-section-submit .login-form-submit-btn input:hover {
+    background-color: white;
+}
+
+/*Animation side form*/
+
+.page-side .section-form {
+    visibility: hidden;
+    transition: 0s ease;
+    transform: translate(0, 30px);
+    opacity: 0;
+}
+.page-side.section-open .section-form {
+    transition: .5s ease .5s;
+    transform: translate(0px, 0px);
+    opacity: 1;
+    visibility: visible;
+}
+.form-title {
+    max-width: 0px;
+    overflow: hidden;
+    transition: 0s ease;
+}
+
+.page-side.section-open .form-title {
+    max-width: 400px;
+    overflow-x: hidden;
+    transition: .5s ease .5s;
+}
+
+/*Media query for responsive design*/
+
+@media (max-width:767px) {
+    .signin-section:before {content: none;}
+    .signup-section:before {content: none;}
+    .page-side.section-close {width: 120px;}
+    .page-side.section-open {width: 100%;}
+    .page-side.section-close:hover {width: 140px;}
+    .choice img { width: 60px;}
+    .title {font-size: 13px;}
+    .page-side .signup-form-area {padding: 20px;}
+    .page-side .signin-form-area {padding: 20px;}
+    .form-title {font-size: 36px;margin: 30px 0 0;}
+    .label .input {font-size: 13px;}
+}

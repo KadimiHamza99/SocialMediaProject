@@ -1,0 +1,226 @@
+/*css general*/
+body {
+    padding: 0;
+    margin: 0;
+}
+.page {
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    min-height: 500px;
+}
+/*for description*/
+.description-section{
+	background-color: white;
+	background-attachment: fixed;
+    position: relative;
+    transition: .5s ease;
+}
+.description-section:before {
+
+    background-attachment: fixed;
+    background-color:white;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0px;
+    z-index: 5;
+    right: 20px;
+    border-radius: 0%;
+    transition: .3s ease;
+}
+.description-section:hover:before {
+    width: 20px;
+    right: -10px;
+    border-radius: 30%;
+    z-index: 10;
+}
+/*for hobbies*/
+.hobbies-section{
+	background-color: black;
+	background-attachment: fixed;
+    position: relative;
+    transition: .5s ease;
+}
+.hobbies-section:before {
+    background-attachment: fixed;
+    background-color:  black;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0px;
+    z-index: 5;
+    left: 20px;
+    border-radius: 0%;
+    transition: .3s ease;
+}
+.hobbies-section:hover:before {
+    width: 20px;
+    left: -10px;
+    border-radius: 30%;
+    z-index: 10;
+}
+/*for titles*/
+.title {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 10px 0 10px;
+    font-size: 17px;
+    color: white;
+}
+/*The open section*/
+.page-side.section-open {
+    width: 100%;
+}
+.page-side.section-close {
+    width: 350px;
+}
+.page-side.section-close:hover {
+    width: 390px;
+}
+.page-side.section-open:hover:before {
+    width: 0px;
+    right: 0px;
+    border-radius: 30%;
+    z-index: 10;
+}
+/*description form*/
+.page-side .description-form-area {
+    width: 100%;
+    max-width: 555px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 11;
+    position: relative;
+}
+.form-title{
+    margin: 50px 0 0 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 46px;
+    white-space: nowrap;
+}
+.description-section .form-title{
+    color: #0C67ED;
+}
+.description-form-submit-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.description-form-submit-btn input {
+    position: relative;
+    background-color: #0C67ED;
+    color: #FFF;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    height: 35px;
+    width: 80px;
+    border-radius: 20px;
+    font-size: 0;
+    background-image: url(../Image/submit-white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.description-form-submit-btn input:hover{
+     background-color: black;
+}
+
+.page-side.section-open .icon {
+    margin-top: -15px;
+    opacity: 0;
+   	visibility: hidden;
+}
+/*hobbies form*/
+.page-side .hobbies-form-area{
+    width: 100%;
+    max-width: 555px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 11;
+    position: relative;
+}
+.hobbies-section .form-title{
+    color: #0C67ED;
+}
+.section-form {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.hobbies-form-submit-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.hobbies-form-submit-btn input {
+    position: relative;
+    background-color: #0C67ED;
+    color: #FFF;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    height: 35px;
+    width: 80px;
+    border-radius: 20px;
+    font-size: 0;
+    background-image: url(../Image/submit-black.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.hobbies-form-submit-btn input:hover {
+    background-color: white;
+}
+
+/*animation side form*/
+.page-side .section-form {
+    visibility: hidden;
+    transition: 0s ease;
+    transform: translate(0, 30px);
+    opacity: 0;
+}
+.page-side.section-open .section-form {
+    transition: .5s ease .5s;
+    transform: translate(0px, 0px);
+    opacity: 1;
+    visibility: visible;
+}
+.form-title {
+    max-width: 0px;
+    overflow: hidden;
+    transition: 0s ease;
+}
+
+.page-side.section-open .form-title {
+    max-width: 400px;
+    overflow-x: hidden;
+    transition: .5s ease .5s;
+}
+.icon{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: .5s ease .5s;
+    z-index: 12;
+    cursor: pointer;
+}
